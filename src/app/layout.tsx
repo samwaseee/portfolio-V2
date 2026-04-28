@@ -29,3 +29,17 @@ export const metadata: Metadata = {
     images: ["/images/about_Img.jpg"], 
   },
 };
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" className="scroll-smooth">
+      <body className="bg-[#0a0a0a] text-slate-200">
+        {children}
+      </body>
+    </html>
+  );
+}
