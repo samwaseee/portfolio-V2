@@ -5,7 +5,10 @@ export const personalInfo = {
   education: "B.Sc. in Computer Science and Engineering - International Islamic University Chittagong (IIUC)",
   socials: {
     github: "https://github.com/samwaseee",
-    linkedin: "https://linkedin.com/in/samiur-rahman-wasi", 
+    linkedin: "https://linkedin.com/in/samiur-rahman-wasi",
+    facebook: "https://www.facebook.com/Samiur.Rahman.Wasee",
+    instagram: "https://www.instagram.com/samiur_rahman_wasee",
+    twitter: "https://twitter.com/samwaseee",
   },
   contact: {
     email: "samwaseee@gmail.com",
