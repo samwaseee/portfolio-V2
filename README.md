@@ -4,10 +4,11 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
+[![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white)](https://gsap.com/)
 
 A high-performance, cinematic personal portfolio designed to showcase my journey as a Full Stack Web Developer and Software Engineer. Built with a focus on seamless user experience, scroll-triggered animations, and a sleek dark-mode aesthetic.
 
-🔗 **Live Demo:** https://samiur-rahman-wasi.vercel.app
+🔗 **Live Demo:** https://samiur-rahman-wasee.vercel.app
 
 ---
 
@@ -47,8 +48,8 @@ Make sure you have [Node.js](https://nodejs.org/) installed (v18.x or later reco
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/samwaseee/your-repo-name.git](https://github.com/samwaseee/your-repo-name.git)
-   cd your-repo-name
+   git clone https://github.com/samwaseee/portfolio-V2
+   cd portfolio-V2
    ```
 
 2. **Install dependencies:**
@@ -84,6 +85,9 @@ A quick look at the core structure:
 │   └── images/               # Project screenshots, certificates, and profile photos
 ├── src/
 │   ├── app/                  
+│   │   ├── projects/         # Dynamic routing directory
+│   │   │   └── [slug]/       
+│   │   │       └── page.tsx  # Dynamic project details page
 │   │   ├── layout.tsx        # Root layout & global metadata
 │   │   ├── page.tsx          # Main entry page assembling all sections
 │   │   └── globals.css       # Global styles and Tailwind directives
