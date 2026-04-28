@@ -181,8 +181,8 @@ export default function Hero() {
           </h1>
           
           <p className="text-xl text-neutral-400 font-medium max-w-lg mx-auto md:mx-0 drop-shadow-lg">
-            <TypewriterText text="A Professional Full Stack Web Developer and " delay={2.8} />
-            <TypewriterText text="Software Engineer" delay={3.8} className="text-red-500" />
+            <TypewriterText text="A CSE undergrad and " delay={2.8} />
+            <TypewriterText text="Full Stack Developer" delay={3.8} className="text-red-500" />
             <TypewriterText text="." delay={4.2} />
           </p>
           
@@ -216,14 +216,14 @@ export default function Hero() {
                     className="bg-red-500 flex overflow-hidden border-l border-neutral-700/50"
                   >
                     <a 
-                      href="/resume.pdf" 
+                      href="https://drive.google.com/file/d/1USJt6uThG9662unjn-I0Ups3TETW1aeT/view?usp=sharing" 
                       download 
                       className="flex items-center px-8 py-3 text-white font-semibold hover:bg-red-600 transition whitespace-nowrap w-full"
                     >
                       <svg className="w-5 h-5 mr-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                       </svg>
-                      Download CV
+                      Resume
                     </a>
                   </motion.div>
                 )}

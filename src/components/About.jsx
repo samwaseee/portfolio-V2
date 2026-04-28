@@ -2,14 +2,30 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { personalInfo } from "../data/portfolioData";
+import { useState, useEffect } from "react";
 
 export default function About() {
+  // 1. Set up a hydration-safe state to detect mobile devices
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Check if the screen is smaller than the 'lg' breakpoint (1024px)
+    const checkMobile = () => setIsMobile(window.innerWidth < 1024);
+    
+    checkMobile(); // Check immediately on mount
+    window.addEventListener("resize", checkMobile);
+    
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   return (
     <motion.section 
       id="about" 
-      // 1. Trigger the hover state for the WHOLE section
       initial="initial"
       whileHover="hoverState"
+      // 2. THE FIX: If on mobile, trigger the color fade automatically when scrolling into view
+      whileInView={isMobile ? "hoverState" : undefined}
+      viewport={{ once: true, margin: "-200px" }}
       className="relative py-24 px-6 max-w-7xl mx-auto min-h-[70vh] flex flex-col justify-center overflow-hidden"
     >
       
@@ -29,7 +45,7 @@ export default function About() {
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        {/* --- LEFT SIDE: CONTENT (Shifted to Left) --- */}
+        {/* --- LEFT SIDE: CONTENT --- */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -62,9 +78,9 @@ export default function About() {
           {/* Quick Stats */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 pt-4">
              {[
-               { val: "3+", label: "Years Exp." },
+               { val: "3", label: "ML Research Papers" },
                { val: "20+", label: "Certifications" },
-               { val: "10+", label: "Project Wins" }
+               { val: "10+", label: "Real World Projects" }
              ].map((stat, i) => (
                <div key={i} className="flex flex-col">
                  <span className="text-red-500 font-black text-3xl">{stat.val}</span>
@@ -74,10 +90,10 @@ export default function About() {
           </div>
         </motion.div>
 
-        {/* --- RIGHT SIDE: IMAGE (Shifted to Right) --- */}
+        {/* --- RIGHT SIDE: IMAGE --- */}
         <div className="lg:col-span-5 relative order-1 lg:order-2">
           
-          {/* 2. Glow reacts to the section hover variant */}
+          {/* Glow reacts to the section hover variant */}
           <motion.div 
             variants={{
                 initial: { opacity: 0.3, scale: 0.9 },
@@ -93,7 +109,7 @@ export default function About() {
             viewport={{ once: true }}
             className="relative aspect-[3/4] rounded-2xl overflow-hidden border-2 border-neutral-800 transition-colors duration-500 shadow-2xl"
           >
-            {/* 3. The Image filter now listens to the section's "hoverState" */}
+            {/* The Image filter listens to the section's "hoverState" */}
             <motion.div
               className="w-full h-full"
               variants={{
