@@ -8,7 +8,7 @@ import AnimatedSection from "../components/AnimatedSection";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-cyan-500/30 overflow-hidden relative">
+    <main className="min-h-screen bg-[#0a0a0a] text-slate-200 font-sans selection:bg-orange-500/30 overflow-hidden relative">
       <Navbar />
       <Hero />
       
