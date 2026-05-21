@@ -63,6 +63,55 @@ export const projects = [
     futurePlans:
       "Integrating advanced analytics for administrators to monitor overall campus performance.",
   },
+   {
+    slug: "promptforge",
+    title: "PromptForge",
+    image: "/images/promtforge-home.png",
+    stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "Node.js"],
+    shortDesc:
+      "A modern AI prompt marketplace with role-based dashboards for buyers, sellers, and admins.",
+    longDesc:
+      "PromptForge is a next-generation marketplace platform built for AI workflows. It supports prompt discovery, secure purchases, sales management, and analytics across buyer, seller, and admin roles.",
+    features: [
+      "Browse and purchase validated AI prompts with ratings, reviews, and a personal vault.",
+      "Seller inventory management with revenue tracking, performance analytics, and payout history.",
+      "Admin tools for user management, prompt approval, moderation, and platform reporting.",
+      "Google OAuth authentication, responsive UI, and real-time data synchronization.",
+    ],
+    pageBreakdowns: [
+      {
+        pageName: "Landing Page",
+        description:
+          "A polished homepage that introduces the marketplace, highlights featured prompts, and directs users into buyer, seller, or admin workflows.",
+        image: "/images/promtforge-home(fullpage).png",
+      },
+      {
+        pageName: "Buyer Library",
+        description:
+          "Buyers can search by category, read reviews, make purchases, and access purchased prompts in a secure vault.",
+        image: "/images/promtforge-buyer library.png",
+      },
+      {
+        pageName: "Seller Dashboard",
+        description:
+          "Sellers manage prompt inventory, view revenue analytics, track sales, and update payout settings.",
+        image: "/images/promtforge-frontend.vercel.app_dashboard_seller.png",
+      },
+      {
+        pageName: "Admin Dashboard",
+        description:
+          "Admins review submissions, moderate content, monitor platform metrics, and manage users and transactions.",
+        image: "/images/promtforge-admin dashboard.png",
+      },
+    ],
+    liveLink: "https://promtforge-frontend.vercel.app/",
+    githubClient: "https://github.com/samwaseee/promtforge-frontend",
+    githubServer: "https://github.com/samwaseee/promtforge-backend",
+    challenges:
+      "Coordinating role-based dashboards and secure prompt transactions while keeping the marketplace fast and responsive.",
+    futurePlans:
+      "Expanding AI prompt categories, improving analytics, and adding deeper API-driven personalization for buyers and sellers.",
+  },
   {
     slug: "care-camp",
     title: "Care Camp",
