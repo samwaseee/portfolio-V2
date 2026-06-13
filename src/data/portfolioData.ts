@@ -1,3 +1,5 @@
+import { video } from "framer-motion/client";
+
 export const personalInfo = {
   name: "Samiur Rahman Wasee",
   designation: "Full Stack Developer | ML Researcher ",
@@ -63,44 +65,55 @@ export const projects = [
     futurePlans:
       "Integrating advanced analytics for administrators to monitor overall campus performance.",
   },
-   {
+  {
     slug: "promptforge",
     title: "PromptForge",
     image: "/images/promtforge-home.png",
-    stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "Node.js"],
+    video: "/videos/promptforge_demo.mp4",
+    stack: [
+      "Next.js", 
+      "React", 
+      "TypeScript", 
+      "PostgreSQL",
+      "Tailwind CSS", 
+      "Firebase", 
+      "JWT", 
+      "Recharts", 
+      "Framer Motion"
+    ],
     shortDesc:
-      "A modern AI prompt marketplace with role-based dashboards for buyers, sellers, and admins.",
+      "A premium full-stack e-commerce marketplace for discovering, buying, and selling production-ready AI prompts with multi-role dashboards.",
     longDesc:
-      "PromptForge is a next-generation marketplace platform built for AI workflows. It supports prompt discovery, secure purchases, sales management, and analytics across buyer, seller, and admin roles.",
+      "PromptForge is a highly scalable digital asset exchange designed for the AI generation era. It bridges the gap between AI engineers and everyday users by providing a secure, centralized platform to trade prompts for cutting-edge models like GPT-4, Claude, and Midjourney. The architecture features robust role-based access control, delivering tailored experiences, secure transactions, and advanced analytics for Buyers, Sellers, and Administrators.",
     features: [
-      "Browse and purchase validated AI prompts with ratings, reviews, and a personal vault.",
-      "Seller inventory management with revenue tracking, performance analytics, and payout history.",
-      "Admin tools for user management, prompt approval, moderation, and platform reporting.",
-      "Google OAuth authentication, responsive UI, and real-time data synchronization.",
+      "Centralized Prompt Vault: Discover, securely purchase, and store production-ready AI assets in a personalized, gated library.",
+      "Seller Analytics: Comprehensive dashboards featuring real-time revenue tracking, sales visualization, and inventory management.",
+      "Admin Moderation: Powerful approval workflows, financial reporting tools, and user management to maintain marketplace quality.",
+      "Enterprise-Grade Security: Implemented JWT-backed API clients, protected routes, and Firebase Google OAuth for seamless authentication."
     ],
     pageBreakdowns: [
       {
         pageName: "Landing Page",
         description:
-          "A polished homepage that introduces the marketplace, highlights featured prompts, and directs users into buyer, seller, or admin workflows.",
+          "A highly polished, conversion-optimized homepage that introduces the marketplace, highlights trending prompts, and routes users into specific role-based workflows.",
         image: "/images/promtforge-home(fullpage).png",
       },
       {
         pageName: "Buyer Library",
         description:
-          "Buyers can search by category, read reviews, make purchases, and access purchased prompts in a secure vault.",
+          "A secure, centralized vault where buyers can search via category filters, read reviews, execute purchases, and access their unlocked digital assets.",
         image: "/images/promtforge-buyer library.png",
       },
       {
         pageName: "Seller Dashboard",
         description:
-          "Sellers manage prompt inventory, view revenue analytics, track sales, and update payout settings.",
+          "A comprehensive analytics hub allowing sellers to manage their prompt inventory, track real-time revenue trends, and monitor sales performance.",
         image: "/images/promtforge-frontend.vercel.app_dashboard_seller.png",
       },
       {
         pageName: "Admin Dashboard",
         description:
-          "Admins review submissions, moderate content, monitor platform metrics, and manage users and transactions.",
+          "The core moderation portal where administrators review incoming prompt submissions, monitor platform GMV, and manage global user statuses.",
         image: "/images/promtforge-admin dashboard.png",
       },
     ],
@@ -108,9 +121,9 @@ export const projects = [
     githubClient: "https://github.com/samwaseee/promtforge-frontend",
     githubServer: "https://github.com/samwaseee/promtforge-backend",
     challenges:
-      "Coordinating role-based dashboards and secure prompt transactions while keeping the marketplace fast and responsive.",
+      "Architecting a secure, multi-role ecosystem where digital assets remain completely hidden until a transaction is validated, while ensuring real-time data synchronization across complex analytical dashboards without sacrificing UI performance.",
     futurePlans:
-      "Expanding AI prompt categories, improving analytics, and adding deeper API-driven personalization for buyers and sellers.",
+      "Integrating direct API connections to test prompts live within the browser, expanding the analytics engine with predictive sales models, and implementing a comprehensive rating/review system for enhanced marketplace trust.",
   },
   {
     slug: "care-camp",
@@ -259,6 +272,8 @@ export const achievements = [
       {
         src: "/images/QPAIN2026_NIDS.jpg",
         alt: "Behavioral Generative Augmentation for Network Intrusion Detection - IEEE QPAIN 2026",
+        href: "https://doi.org/10.1109/QPAIN69676.2026.11545987",
+        isbn: "979-8-3315-4990-9",
       },
       {
         src: "/images/IEOM2025.jpg",
@@ -270,6 +285,8 @@ export const achievements = [
       {
         src: "/images/QPAIN2026_QUT-DV25.jpg",
         alt: "Revisiting the QUT-DV25 Benchmark: Interpretable Feature-Fused Models for PyPI Malware Detection - IEEE QPAIN 2026",
+        href: "https://doi.org/10.1109/QPAIN69676.2026.11545547",
+        isbn: "979-8-3315-4990-9",
       },
     ],
   },

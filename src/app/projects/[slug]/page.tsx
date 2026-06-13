@@ -52,29 +52,40 @@ export default function ProjectDetails({ params }: { params: Promise<{ slug: str
           </p>
         </motion.div>
 
-        {/* Hero Image */}
-        <motion.div
+        {/* Hero Image / Video */}
+        <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2 }}
           className="relative aspect-video rounded-2xl overflow-hidden border border-neutral-800 mb-16 shadow-2xl bg-black"
         >
-          {/* Blurred Background */}
-          <Image
-            src={project.image}
-            alt=""
-            fill
-            className="object-cover opacity-30 blur-3xl scale-110"
+          {/* Blurred Background (Fills empty space for both Image and Video) */}
+          <Image 
+            src={project.image} 
+            alt="" 
+            fill 
+            className="object-cover opacity-30 blur-3xl scale-110 pointer-events-none"
           />
-
-          {/* Actual Uncropped Image */}
-          <Image
-            src={project.image}
-            alt={project.title}
-            fill
-            className="object-contain p-2 relative z-10"
-            priority
-          />
+          
+          {/* If a video exists, auto-play it. Otherwise, fallback to the uncropped image. */}
+          {project.video ? (
+            <video
+              src={project.video}
+              autoPlay
+              muted
+              loop
+              playsInline 
+              className="absolute inset-0 w-full h-full object-contain p-2 z-20"
+            />
+          ) : (
+            <Image 
+              src={project.image} 
+              alt={project.title} 
+              fill 
+              className="object-contain p-2 relative z-10"
+              priority
+            />
+          )}
         </motion.div>
 
         {/* Content Grid */}
