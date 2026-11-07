@@ -145,10 +145,11 @@ export default function Hero() {
         <div ref={imageRef} className="relative w-full h-full flex items-center justify-center">
           <div className="relative w-[340px] h-[520px] md:w-[400px] md:h-[650px] lg:w-[450px] lg:h-[700px] z-10 pointer-events-none">
             <Image 
-              src="/images/samwasee.png" 
+              src="/images/samwasee.webp"
               alt="Samiur Rahman Wasi" 
               fill 
-              loading="eager"
+              preload
+              sizes="(min-width: 1024px) 450px, (min-width: 768px) 400px, 340px"
               className="object-cover object-top" 
             />
           </div>

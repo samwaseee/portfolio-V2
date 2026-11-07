@@ -101,12 +101,14 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0], index: n
             src={project.image} 
             alt={project.title} 
             fill 
+            sizes="(min-width: 1280px) 604px, (min-width: 1024px) 45vw, calc(100vw - 3rem)"
             className={`object-cover transition-opacity duration-700 ${isPlaying ? 'opacity-0' : 'opacity-30 blur-2xl scale-110'}`}
           />
           <Image 
             src={project.image} 
             alt={project.title} 
             fill 
+            sizes="(min-width: 1280px) 604px, (min-width: 1024px) 45vw, calc(100vw - 3rem)"
             className={`object-contain p-2 relative z-10 transition-all duration-700 ${isPlaying ? 'opacity-0 scale-110' : 'opacity-100 group-hover:scale-105'}`}
           />
 
@@ -117,6 +119,8 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0], index: n
                muted
                loop
                playsInline 
+               preload="none"
+               poster={project.image}
                className={`absolute inset-0 w-full h-full object-cover z-20 transition-opacity duration-700 pointer-events-none ${isPlaying ? 'opacity-100' : 'opacity-0'}`}
              />
           )}

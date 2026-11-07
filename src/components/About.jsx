@@ -111,7 +111,7 @@ export default function About() {
           >
             {/* The Image filter listens to the section's "hoverState" */}
             <motion.div
-              className="w-full h-full"
+              className="relative w-full h-full"
               variants={{
                 initial: { filter: "grayscale(100%)", scale: 1 },
                 hoverState: { 
@@ -122,11 +122,11 @@ export default function About() {
               }}
             >
               <Image 
-                src="/images/about_Img.jpg"
+                src="/images/about_Img.webp"
                 alt="Samiur Rahman Wasi" 
                 fill 
+                sizes="(min-width: 1280px) 506px, (min-width: 1024px) 40vw, calc(100vw - 3rem)"
                 className="object-cover object-top"
-                priority
               />
             </motion.div>
 

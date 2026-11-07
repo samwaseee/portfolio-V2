@@ -32,7 +32,7 @@ export default function Contact() {
         className="mb-16"
       >
         <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-4">
-          Let's Connect<span className="text-red-500">.</span>
+          Let&apos;s Connect<span className="text-red-500">.</span>
         </h2>
         <div className="w-20 h-1 bg-red-500 rounded-full"></div>
       </motion.div>
@@ -49,7 +49,7 @@ export default function Contact() {
         >
           <div className="space-y-8">
             <p className="text-xl text-neutral-400 leading-relaxed font-medium">
-              I'm always open to discussing new development opportunities, challenging projects, or research collaborations in Cybersecurity and AI.
+              I&apos;m always open to discussing new development opportunities, challenging projects, or research collaborations in Cybersecurity and AI.
             </p>
             
             <div className="space-y-6">

@@ -64,6 +64,7 @@ export default function ProjectDetails({ params }: { params: Promise<{ slug: str
             src={project.image} 
             alt="" 
             fill 
+            sizes="(min-width: 1024px) 976px, calc(100vw - 3rem)"
             className="object-cover opacity-30 blur-3xl scale-110 pointer-events-none"
           />
           
@@ -75,6 +76,8 @@ export default function ProjectDetails({ params }: { params: Promise<{ slug: str
               muted
               loop
               playsInline 
+              preload="metadata"
+              poster={project.image}
               className="absolute inset-0 w-full h-full object-contain p-2 z-20"
             />
           ) : (
@@ -82,8 +85,9 @@ export default function ProjectDetails({ params }: { params: Promise<{ slug: str
               src={project.image} 
               alt={project.title} 
               fill 
+              sizes="(min-width: 1024px) 976px, calc(100vw - 3rem)"
               className="object-contain p-2 relative z-10"
-              priority
+              preload
             />
           )}
         </motion.div>
@@ -135,9 +139,10 @@ export default function ProjectDetails({ params }: { params: Promise<{ slug: str
                           alt={page.pageName}
                           width={1200}
                           height={3000}
+                          sizes="(min-width: 1024px) 301px, (min-width: 768px) calc((100vw - 5rem) / 2), calc(100vw - 3rem)"
                           className="w-full h-auto object-top"
                           onError={(e) => {
-                            e.currentTarget.src = "/images/project_1.png"; // Fallback image
+                            e.currentTarget.src = "/images/project_1.webp";
                           }}
                         />
                       </div>

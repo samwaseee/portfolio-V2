@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://samiur-rahman-wasee.vercel.app"),
   title: "Samiur Rahman Wasee | Full Stack Developer",
   description: "Personal portfolio of Samiur Rahman Wasee, a Full Stack Developer and ML researcher based in Chattogram.",
   keywords: ["Samiur Rahman Wasee", "Full Stack Developer", "Software Engineer", "MERN Stack", "Next.js", "Portfolio", "Chattogram"],
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     siteName: "Samiur Rahman Wasee Portfolio",
     images: [
       {
-        url: "/images/about_Img.jpg",
+        url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Samiur Rahman Wasee Profile Picture",
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Samiur Rahman Wasee | Full Stack Developer",
     description: "Full Stack Developer & AI Researcher",
-    images: ["/images/about_Img.jpg"], 
+    images: ["/images/og-image.jpg"],
   },
 };
 

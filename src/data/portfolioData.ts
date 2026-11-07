@@ -1,5 +1,3 @@
-import { video } from "framer-motion/client";
-
 export const personalInfo = {
   name: "Samiur Rahman Wasee",
   designation: "Full Stack Developer | ML Researcher ",
@@ -30,7 +28,7 @@ export const projects = [
   {
     slug: "starlight-university",
     title: "Starlight University",
-    image: "/images/project_1.png",
+    image: "/images/project_1.webp",
     stack: ["React", "Express.js", "Node.js", "MongoDB", "Tailwind CSS", "XML"],
     shortDesc:
       "A comprehensive educational management system handling courses, attendance, and exams.",
@@ -68,7 +66,7 @@ export const projects = [
   {
     slug: "promptforge",
     title: "PromptForge",
-    image: "/images/promtforge-home.png",
+    image: "/images/promtforge-home.webp",
     video: "/videos/promptforge_demo.mp4",
     stack: [
       "Next.js", 
@@ -96,25 +94,25 @@ export const projects = [
         pageName: "Landing Page",
         description:
           "A highly polished, conversion-optimized homepage that introduces the marketplace, highlights trending prompts, and routes users into specific role-based workflows.",
-        image: "/images/promtforge-home(fullpage).png",
+        image: "/images/promtforge-home(fullpage).webp",
       },
       {
         pageName: "Buyer Library",
         description:
           "A secure, centralized vault where buyers can search via category filters, read reviews, execute purchases, and access their unlocked digital assets.",
-        image: "/images/promtforge-buyer library.png",
+        image: "/images/promtforge-buyer library.webp",
       },
       {
         pageName: "Seller Dashboard",
         description:
           "A comprehensive analytics hub allowing sellers to manage their prompt inventory, track real-time revenue trends, and monitor sales performance.",
-        image: "/images/promtforge-frontend.vercel.app_dashboard_seller.png",
+        image: "/images/promtforge-frontend.vercel.app_dashboard_seller.webp",
       },
       {
         pageName: "Admin Dashboard",
         description:
           "The core moderation portal where administrators review incoming prompt submissions, monitor platform GMV, and manage global user statuses.",
-        image: "/images/promtforge-admin dashboard.png",
+        image: "/images/promtforge-admin dashboard.webp",
       },
     ],
     liveLink: "https://promtforge-frontend.vercel.app/",
@@ -128,7 +126,7 @@ export const projects = [
   {
     slug: "care-camp",
     title: "Care Camp",
-    image: "/images/project_2.png",
+    image: "/images/project_2.webp",
     stack: ["React", "Express.js", "MongoDB", "Stripe", "JWT"],
     shortDesc: "A comprehensive Medical Camp Management System.",
     longDesc:
@@ -144,7 +142,7 @@ export const projects = [
         pageName: "Home Page",
         description:
           "Displays navbar with authenticated profile dropdown, a success stories banner slider, popular camps showcase, and comprehensive camp details with registration modals.",
-        image: "/images/project_2.png",
+        image: "/images/project_2.webp",
       },
       {
         pageName: "Available Camps & Search",
@@ -176,7 +174,7 @@ export const projects = [
   {
     slug: "bookedinn",
     title: "BookedInn",
-    image: "/images/project_3.png",
+    image: "/images/project_3.webp",
     stack: [
       "React",
       "Express.js",
@@ -230,7 +228,7 @@ export const projects = [
   {
     slug: "sam-travels",
     title: "SAM Travels",
-    image: "/images/project_4.png",
+    image: "/images/project_4.webp",
     stack: ["React", "Express.js", "MongoDB", "Tailwind CSS", "Daisy UI"],
     shortDesc:
       "A collaborative tourist spot management system for European exploration.",
@@ -270,20 +268,20 @@ export const achievements = [
     title: "Research Publications",
     images: [
       {
-        src: "/images/QPAIN2026_NIDS.jpg",
+        src: "/images/QPAIN2026_NIDS.webp",
         alt: "Behavioral Generative Augmentation for Network Intrusion Detection - IEEE QPAIN 2026",
         href: "https://doi.org/10.1109/QPAIN69676.2026.11545987",
         isbn: "979-8-3315-4990-9",
       },
       {
-        src: "/images/IEOM2025.jpg",
+        src: "/images/IEOM2025.webp",
         alt: "IEOM 2025 Bangladesh Conference Research",
         href: "https://doi.org/10.46254/BA08.20250158",
         isbn: "979-8-3507-4441-5",
         issn: "2169-8767",
       },
       {
-        src: "/images/QPAIN2026_QUT-DV25.jpg",
+        src: "/images/QPAIN2026_QUT-DV25.webp",
         alt: "Revisiting the QUT-DV25 Benchmark: Interpretable Feature-Fused Models for PyPI Malware Detection - IEEE QPAIN 2026",
         href: "https://doi.org/10.1109/QPAIN69676.2026.11545547",
         isbn: "979-8-3315-4990-9",
@@ -294,7 +292,7 @@ export const achievements = [
     title: "Competitive Programming",
     images: [
       {
-        src: "/images/canvas.png",
+        src: "/images/canvas.webp",
         href: "https://www.hackerrank.com/certificates/3321f878e95d",
       },
       { src: "/images/Samiur Rahman Wasi.jpg" },
@@ -304,9 +302,9 @@ export const achievements = [
     title: "Web Development",
     images: [
       { src: "/images/blackbelt.png" },
-      { src: "/images/certificate_page-0001.jpg" },
+      { src: "/images/certificate_page-0001.webp" },
       {
-        src: "/images/Jira.png",
+        src: "/images/jira.png",
         href: "https://simpli-web.app.link/e/0f5n03eEXXb",
       },
     ],
@@ -400,11 +398,11 @@ export const achievements = [
   },
   {
     title: "App Design",
-    images: ["/images/Samiur Rahman Wasi.png"],
+    images: ["/images/Samiur Rahman Wasi.webp"],
   },
   {
     title: "Idea Generation",
-    images: ["/images/bl.jpg"],
+    images: ["/images/bl.webp"],
   },
   {
     title: "Cyber Security",
@@ -434,6 +432,6 @@ export const achievements = [
   },
   {
     title: "ICISET Conference",
-    images: ["/images/ieee.jpg"],
+    images: ["/images/ieee.webp"],
   },
 ];

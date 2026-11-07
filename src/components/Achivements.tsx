@@ -1,10 +1,57 @@
 "use client";
-import React, { useState } from 'react';
+import { useState } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { achievements } from '../data/portfolioData'; // <-- Imported from data file
+import { achievements } from '../data/portfolioData';
 
-// --- DRAWER COMPONENT ---
-const AchievementDrawer = ({ title, images }: { title: string, images: any[] }) => {
+type AchievementImage =
+    | string
+    | {
+        src: string;
+        alt?: string;
+        href?: string;
+        isbn?: string;
+        issn?: string;
+    };
+
+// Add an entry here for every achievement image to preserve its intrinsic aspect ratio.
+const imageDimensions: Record<string, { width: number; height: number }> = {
+    '/images/QPAIN2026_NIDS.webp': { width: 1600, height: 1132 },
+    '/images/IEOM2025.webp': { width: 1275, height: 1650 },
+    '/images/QPAIN2026_QUT-DV25.webp': { width: 1600, height: 1132 },
+    '/images/canvas.webp': { width: 1600, height: 1200 },
+    '/images/Samiur Rahman Wasi.jpg': { width: 1280, height: 904 },
+    '/images/blackbelt.png': { width: 1500, height: 1500 },
+    '/images/certificate_page-0001.webp': { width: 1600, height: 1236 },
+    '/images/jira.png': { width: 1653, height: 1168 },
+    '/images/LLM.png': { width: 1653, height: 1168 },
+    '/images/NLP.png': { width: 1653, height: 1168 },
+    '/images/Introduction to NN.png': { width: 1653, height: 1168 },
+    '/images/Gemini for Google Workspace.png': { width: 1653, height: 1168 },
+    '/images/Generative AI.png': { width: 1653, height: 1168 },
+    '/images/Tensorflow.png': { width: 1653, height: 1168 },
+    '/images/Prompt Engineering.png': { width: 1653, height: 1168 },
+    '/images/Agentic AI.png': { width: 1653, height: 1168 },
+    '/images/EDGE_certificate.png': { width: 1653, height: 1168 },
+    '/images/Data Analyst 101.png': { width: 1653, height: 1168 },
+    '/images/PowerBi.png': { width: 1653, height: 1168 },
+    '/images/Data Analytics.png': { width: 1653, height: 1168 },
+    '/images/Data Analytics with Gen AI.png': { width: 1653, height: 1168 },
+    '/images/SQL Analytics and BI.png': { width: 1653, height: 1168 },
+    '/images/AWS cloud adoptation framework.png': { width: 1653, height: 1168 },
+    '/images/Basics of AZURE.png': { width: 1653, height: 1168 },
+    '/images/Google Cloud Operations.png': { width: 1653, height: 1168 },
+    '/images/Data Transformation with Google Cloud.png': { width: 1653, height: 1168 },
+    '/images/Samiur Rahman Wasi.webp': { width: 1414, height: 2000 },
+    '/images/bl.webp': { width: 1600, height: 1156 },
+    '/images/cybersecurity.png': { width: 1326, height: 1000 },
+    '/images/CISSP.png': { width: 1653, height: 1168 },
+    '/images/Screenshot 2024-06-27 010101.png': { width: 1199, height: 926 },
+    '/images/10 minutes school.png': { width: 1653, height: 1168 },
+    '/images/ieee.webp': { width: 1600, height: 1264 },
+};
+
+const AchievementDrawer = ({ title, images }: { title: string, images: AchievementImage[] }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
@@ -42,15 +89,20 @@ const AchievementDrawer = ({ title, images }: { title: string, images: any[] }) 
                         <div className="p-5 grid gap-6 bg-[#0a0a0a]">
                             {images.map((img, index) => {
                                 const src = typeof img === 'string' ? img : img.src;
-                                const href = img?.href;
-                                const isbn = img?.isbn; // Capture ISBN
-                                const issn = img?.issn; // Capture ISSN
+                                const alt = typeof img === 'string' ? undefined : img.alt;
+                                const href = typeof img === 'string' ? undefined : img.href;
+                                const isbn = typeof img === 'string' ? undefined : img.isbn;
+                                const issn = typeof img === 'string' ? undefined : img.issn;
+                                const { width, height } = imageDimensions[src] ?? { width: 1200, height: 900 };
 
                                 const imgElement = (
                                     <div className="relative overflow-hidden rounded-lg border border-neutral-800 group bg-black/20">
-                                        <img
+                                        <Image
                                             src={src}
-                                            alt={img?.alt ?? `${title} Certificate ${index + 1}`}
+                                            alt={alt ?? `${title} Certificate ${index + 1}`}
+                                            width={width}
+                                            height={height}
+                                            sizes="(min-width: 1280px) 604px, (min-width: 1024px) calc((100vw - 4.5rem) / 2), calc(100vw - 3rem)"
                                             className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
                                             loading="lazy"
                                         />
