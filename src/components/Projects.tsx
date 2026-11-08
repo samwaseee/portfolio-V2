@@ -133,7 +133,7 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0], index: n
       <div className="w-full lg:w-1/2 space-y-6">
         <div className="space-y-3">
           <div className="flex flex-wrap gap-2">
-            {project.stack.slice(0, 4).map((tech) => (
+            {(project.cardTech ?? project.stack.slice(0, 4)).map((tech) => (
               <span 
                 key={tech} 
                 className="flex items-center gap-1.5 text-[10px] font-bold tracking-widest uppercase px-2.5 py-1.5 bg-neutral-900 border border-neutral-800 text-red-500 rounded-md transition-colors hover:bg-neutral-800"
