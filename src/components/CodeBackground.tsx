@@ -19,9 +19,7 @@ export default function CodeBackground() {
     window.addEventListener("resize", setCanvasSize);
 
     const rawCodes = [
-      ...skills.Frontend,
-      ...skills.Backend,
-      ...skills.Languages,
+      ...Object.values(skills).flat(),
       "npm start",
       "git push",
       "<React />",

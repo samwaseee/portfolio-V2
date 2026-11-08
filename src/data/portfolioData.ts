@@ -18,132 +18,34 @@ export const personalInfo = {
 };
 
 export const skills = {
-  Frontend: ["ReactJS", "NextJS", "Tailwind CSS", "Next UI", "HTML5", "CSS3"],
-  Backend: ["NodeJS", "ExpressJS", "MongoDB", "Firebase", "MSSQL"],
-  Languages: ["JavaScript", "C", "C++", "Python"],
-  Tools: ["Git/GitHub", "Vercel", "Stripe", "JWT"],
+  Frontend: [
+    "ReactJS",
+    "NextJS",
+    "Tailwind CSS",
+    "shadcn/ui",
+    "Material UI",
+    "Next UI",
+    "Framer Motion",
+    "TanStack Query",
+    "HTML5",
+    "CSS3",
+  ],
+  Backend: [
+    "NodeJS",
+    "ExpressJS",
+    "REST APIs",
+    "Prisma",
+    "JWT",
+    "NextAuth",
+    "Zod",
+  ],
+  Databases: ["MongoDB", "PostgreSQL", "Firebase", "MSSQL"],
+  Languages: ["JavaScript", "TypeScript", "Python", "C", "C++", "SQL"],
+  "AI & Research": ["TensorFlow", "LLMs", "NLP", "CNN", "QNN"],
+  Tools: ["Git/GitHub", "Vercel", "Vite", "Stripe", "Cloudinary"],
 };
 
 export const projects = [
-  {
-    slug: "starlight-university",
-    title: "Starlight University",
-    image: "/images/project_1.webp",
-    cardTech: ["Material UI", "Flowbite", "TanStack Query", "EmailJS"],
-    stack: [
-      "Next.js",
-      "React",
-      "TypeScript",
-      "Express.js",
-      "Node.js",
-      "MongoDB",
-      "Tailwind CSS",
-      "Material UI",
-      "Flowbite",
-      "TanStack Query",
-      "Framer Motion",
-      "JWT",
-      "EmailJS",
-    ],
-    shortDesc:
-      "A comprehensive educational management system handling courses, attendance, and exams.",
-    longDesc:
-      "Starlight University is my first team project, designed to tackle the complexities of managing educational institutions. It streamlines various processes for students, teachers, and administrators to foster an efficient educational environment.",
-    features: [
-      "Custom Authentication System: Secure login with encrypted credentials ensures robust data protection.",
-      "Role-Based Access Control: Different access levels for students, teachers, and administrators streamline permissions.",
-      "Course Management: Enables browsing and enrollment of courses.",
-      "Integrated Attendance Tracking: Real-time monitoring of attendance records.",
-      "Exam Management: Students can view upcoming exams and track results.",
-    ],
-    pageBreakdowns: [
-      {
-        pageName: "Home Page",
-        description:
-          "Provides an overview of the application with prominent Call-to-Action buttons, Service Highlights, User Testimonials, and direct Navigation Links.",
-        image: "/images/starlight_home.png",
-      },
-      {
-        pageName: "Admin Dashboard",
-        description:
-          "Includes Statistics Overview, User Management, Course/Exam Administration, Notice Management, Financial Tracking, and Report Generation.",
-        image: "/images/starlight_admin.png",
-      },
-    ],
-    liveLink: "https://starlight-un-edu.vercel.app",
-    githubClient: "https://github.com/samwaseee/starlight-university-client",
-    githubServer: "https://github.com/samwaseee/starlight-university-server",
-    challenges:
-      "Implementing secure, multi-tier role-based access control and ensuring the real-time attendance tracking synced perfectly.",
-    futurePlans:
-      "Integrating advanced analytics for administrators to monitor overall campus performance.",
-  },
-  {
-    slug: "promptforge",
-    title: "PromptForge",
-    image: "/images/promtforge-home.webp",
-    video: "/videos/promptforge_demo.mp4",
-    cardTech: ["PostgreSQL", "Prisma", "Firebase", "Stripe"],
-    stack: [
-      "Next.js",
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "shadcn/ui",
-      "Express.js",
-      "PostgreSQL",
-      "Prisma",
-      "Firebase",
-      "JWT",
-      "Stripe",
-      "Recharts",
-      "Framer Motion",
-      "GSAP",
-    ],
-    shortDesc:
-      "A premium full-stack e-commerce marketplace for discovering, buying, and selling production-ready AI prompts with multi-role dashboards.",
-    longDesc:
-      "PromptForge is a highly scalable digital asset exchange designed for the AI generation era. It bridges the gap between AI engineers and everyday users by providing a secure, centralized platform to trade prompts for cutting-edge models like GPT-4, Claude, and Midjourney. The architecture features robust role-based access control, delivering tailored experiences, secure transactions, and advanced analytics for Buyers, Sellers, and Administrators.",
-    features: [
-      "Centralized Prompt Vault: Discover, securely purchase, and store production-ready AI assets in a personalized, gated library.",
-      "Seller Analytics: Comprehensive dashboards featuring real-time revenue tracking, sales visualization, and inventory management.",
-      "Admin Moderation: Powerful approval workflows, financial reporting tools, and user management to maintain marketplace quality.",
-      "Enterprise-Grade Security: Implemented JWT-backed API clients, protected routes, and Firebase Google OAuth for seamless authentication."
-    ],
-    pageBreakdowns: [
-      {
-        pageName: "Landing Page",
-        description:
-          "A highly polished, conversion-optimized homepage that introduces the marketplace, highlights trending prompts, and routes users into specific role-based workflows.",
-        image: "/images/promtforge-home(fullpage).webp",
-      },
-      {
-        pageName: "Buyer Library",
-        description:
-          "A secure, centralized vault where buyers can search via category filters, read reviews, execute purchases, and access their unlocked digital assets.",
-        image: "/images/promtforge-buyer library.webp",
-      },
-      {
-        pageName: "Seller Dashboard",
-        description:
-          "A comprehensive analytics hub allowing sellers to manage their prompt inventory, track real-time revenue trends, and monitor sales performance.",
-        image: "/images/promtforge-frontend.vercel.app_dashboard_seller.webp",
-      },
-      {
-        pageName: "Admin Dashboard",
-        description:
-          "The core moderation portal where administrators review incoming prompt submissions, monitor platform GMV, and manage global user statuses.",
-        image: "/images/promtforge-admin dashboard.webp",
-      },
-    ],
-    liveLink: "https://promtforge-frontend.vercel.app/",
-    githubClient: "https://github.com/samwaseee/promtforge-frontend",
-    githubServer: "https://github.com/samwaseee/promtforge-backend",
-    challenges:
-      "Architecting a secure, multi-role ecosystem where digital assets remain completely hidden until a transaction is validated, while ensuring real-time data synchronization across complex analytical dashboards without sacrificing UI performance.",
-    futurePlans:
-      "Integrating direct API connections to test prompts live within the browser, expanding the analytics engine with predictive sales models, and implementing a comprehensive rating/review system for enhanced marketplace trust.",
-  },
   {
     slug: "nexusai",
     title: "NexusAI",
@@ -244,6 +146,125 @@ export const projects = [
       "Coordinating NextAuth sessions on the frontend with JWT-protected Express APIs requires a clear boundary between user sessions and API authorization. AI endpoints are kept behind authentication and rate limiting, while career-coach conversations are persisted for later use.",
     futurePlans:
       "Adding real-time messaging between clients and freelancers would make project coordination more direct. Payment and escrow integration could support order transactions within the marketplace.",
+  },
+  {
+    slug: "promptforge",
+    title: "PromptForge",
+    image: "/images/promtforge-home.webp",
+    video: "/videos/promptforge_demo.mp4",
+    cardTech: ["PostgreSQL", "Prisma", "Firebase", "Stripe"],
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Express.js",
+      "PostgreSQL",
+      "Prisma",
+      "Firebase",
+      "JWT",
+      "Stripe",
+      "Recharts",
+      "Framer Motion",
+      "GSAP",
+    ],
+    shortDesc:
+      "A premium full-stack e-commerce marketplace for discovering, buying, and selling production-ready AI prompts with multi-role dashboards.",
+    longDesc:
+      "PromptForge is a highly scalable digital asset exchange designed for the AI generation era. It bridges the gap between AI engineers and everyday users by providing a secure, centralized platform to trade prompts for cutting-edge models like GPT-4, Claude, and Midjourney. The architecture features robust role-based access control, delivering tailored experiences, secure transactions, and advanced analytics for Buyers, Sellers, and Administrators.",
+    features: [
+      "Centralized Prompt Vault: Discover, securely purchase, and store production-ready AI assets in a personalized, gated library.",
+      "Seller Analytics: Comprehensive dashboards featuring real-time revenue tracking, sales visualization, and inventory management.",
+      "Admin Moderation: Powerful approval workflows, financial reporting tools, and user management to maintain marketplace quality.",
+      "Enterprise-Grade Security: Implemented JWT-backed API clients, protected routes, and Firebase Google OAuth for seamless authentication.",
+    ],
+    pageBreakdowns: [
+      {
+        pageName: "Landing Page",
+        description:
+          "A highly polished, conversion-optimized homepage that introduces the marketplace, highlights trending prompts, and routes users into specific role-based workflows.",
+        image: "/images/promtforge-home(fullpage).webp",
+      },
+      {
+        pageName: "Buyer Library",
+        description:
+          "A secure, centralized vault where buyers can search via category filters, read reviews, execute purchases, and access their unlocked digital assets.",
+        image: "/images/promtforge-buyer library.webp",
+      },
+      {
+        pageName: "Seller Dashboard",
+        description:
+          "A comprehensive analytics hub allowing sellers to manage their prompt inventory, track real-time revenue trends, and monitor sales performance.",
+        image: "/images/promtforge-frontend.vercel.app_dashboard_seller.webp",
+      },
+      {
+        pageName: "Admin Dashboard",
+        description:
+          "The core moderation portal where administrators review incoming prompt submissions, monitor platform GMV, and manage global user statuses.",
+        image: "/images/promtforge-admin dashboard.webp",
+      },
+    ],
+    liveLink: "https://promtforge-frontend.vercel.app/",
+    githubClient: "https://github.com/samwaseee/promtforge-frontend",
+    githubServer: "https://github.com/samwaseee/promtforge-backend",
+    challenges:
+      "Architecting a secure, multi-role ecosystem where digital assets remain completely hidden until a transaction is validated, while ensuring real-time data synchronization across complex analytical dashboards without sacrificing UI performance.",
+    futurePlans:
+      "Integrating direct API connections to test prompts live within the browser, expanding the analytics engine with predictive sales models, and implementing a comprehensive rating/review system for enhanced marketplace trust.",
+  },
+  {
+    slug: "starlight-university",
+    title: "Starlight University",
+    image: "/images/project_1.webp",
+    cardTech: ["Material UI", "Flowbite", "TanStack Query", "EmailJS"],
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Express.js",
+      "Node.js",
+      "MongoDB",
+      "Tailwind CSS",
+      "Material UI",
+      "Flowbite",
+      "TanStack Query",
+      "Framer Motion",
+      "JWT",
+      "EmailJS",
+    ],
+    shortDesc:
+      "A comprehensive educational management system handling courses, attendance, and exams.",
+    longDesc:
+      "Starlight University is my first team project, designed to tackle the complexities of managing educational institutions. It streamlines various processes for students, teachers, and administrators to foster an efficient educational environment.",
+    features: [
+      "Custom Authentication System: Secure login with encrypted credentials ensures robust data protection.",
+      "Role-Based Access Control: Different access levels for students, teachers, and administrators streamline permissions.",
+      "Course Management: Enables browsing and enrollment of courses.",
+      "Integrated Attendance Tracking: Real-time monitoring of attendance records.",
+      "Exam Management: Students can view upcoming exams and track results.",
+    ],
+    pageBreakdowns: [
+      {
+        pageName: "Home Page",
+        description:
+          "Provides an overview of the application with prominent Call-to-Action buttons, Service Highlights, User Testimonials, and direct Navigation Links.",
+        image: "/images/starlight_home.png",
+      },
+      {
+        pageName: "Admin Dashboard",
+        description:
+          "Includes Statistics Overview, User Management, Course/Exam Administration, Notice Management, Financial Tracking, and Report Generation.",
+        image: "/images/starlight_admin.png",
+      },
+    ],
+    liveLink: "https://starlight-un-edu.vercel.app",
+    githubClient: "https://github.com/samwaseee/starlight-university-client",
+    githubServer: "https://github.com/samwaseee/starlight-university-server",
+    challenges:
+      "Implementing secure, multi-tier role-based access control and ensuring the real-time attendance tracking synced perfectly.",
+    futurePlans:
+      "Integrating advanced analytics for administrators to monitor overall campus performance.",
   },
   {
     slug: "care-camp",
