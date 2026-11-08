@@ -10,10 +10,19 @@ import {
   SiMui, SiFirebase, SiJsonwebtokens, SiStripe, SiNextdotjs, 
   SiTypescript, SiPostgresql, SiFramer, SiHtml5, SiCss, 
   SiJavascript, SiC, SiCplusplus, SiPython, 
-  SiGithub, SiVercel
+  SiGithub, SiVercel, SiPrisma, SiMongoose, SiGooglegemini,
+  SiCloudinary, SiAntdesign, SiSwiper
 } from "react-icons/si";
 import { DiMsqlServer } from "react-icons/di";
-import { TbApi, TbChartBar } from "react-icons/tb";
+import {
+  TbApi,
+  TbChartBar,
+  TbComponents,
+  TbDatabaseSearch,
+  TbMail,
+  TbMapPin,
+  TbShieldLock,
+} from "react-icons/tb";
 import { BsFiletypeXml } from "react-icons/bs";
 
 const techIcons: { [key: string]: React.ReactNode } = {
@@ -36,19 +45,31 @@ const techIcons: { [key: string]: React.ReactNode } = {
   "Node.js": <SiNodedotjs className="w-3 h-3" />,
   "NodeJS": <SiNodedotjs className="w-3 h-3" />,
   "MongoDB": <SiMongodb className="w-3 h-3" />,
+  "Mongoose": <SiMongoose className="w-3 h-3" />,
   "PostgreSQL": <SiPostgresql className="w-3 h-3" />,
   "MSSQL": <DiMsqlServer className="w-3 h-3" />,
   "Firebase": <SiFirebase className="w-3 h-3" />,
+  "Prisma": <SiPrisma className="w-3 h-3" />,
+  "Gemini API": <SiGooglegemini className="w-3 h-3" />,
+  "Cloudinary": <SiCloudinary className="w-3 h-3" />,
 
   // --- UI Libraries & Animation ---
   "Tailwind CSS": <SiTailwindcss className="w-3 h-3" />,
   "Material UI": <SiMui className="w-3 h-3" />,
+  "Flowbite": <TbComponents className="w-3 h-3" />,
+  "Ant Design": <SiAntdesign className="w-3 h-3" />,
+  "NextUI": <TbComponents className="w-3 h-3" />,
+  "Next UI": <SiNextdotjs className="w-3 h-3" />,
   "Daisy UI": <SiTailwindcss className="w-3 h-3" />, // Uses Tailwind logo as Daisy is a TW plugin
-  "Next UI": <SiNextdotjs className="w-3 h-3" />, // Uses Next.js logo as fallback
+  "Swiper": <SiSwiper className="w-3 h-3" />,
+  "Pigeon Maps": <TbMapPin className="w-3 h-3" />,
+  "TanStack Query": <TbDatabaseSearch className="w-3 h-3" />,
   "Framer Motion": <SiFramer className="w-3 h-3" />,
   "Recharts": <TbChartBar className="w-3 h-3" />, // Generic bar chart icon for Recharts
 
   // --- Auth, Tools & Formats ---
+  "NextAuth": <TbShieldLock className="w-3 h-3" />,
+  "EmailJS": <TbMail className="w-3 h-3" />,
   "JWT": <SiJsonwebtokens className="w-3 h-3" />,
   "Stripe": <SiStripe className="w-3 h-3" />,
   "XML": <BsFiletypeXml className="w-3 h-3" />,
