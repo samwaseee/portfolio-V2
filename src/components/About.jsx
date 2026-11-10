@@ -125,6 +125,7 @@ export default function About() {
                 src="/images/about_Img.webp"
                 alt="Samiur Rahman Wasi" 
                 fill 
+                quality={90}
                 sizes="(min-width: 1280px) 506px, (min-width: 1024px) 40vw, calc(100vw - 3rem)"
                 className="object-cover object-top"
               />

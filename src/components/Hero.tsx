@@ -149,7 +149,8 @@ export default function Hero() {
               alt="Samiur Rahman Wasi" 
               fill 
               preload
-              sizes="(min-width: 1024px) 450px, (min-width: 768px) 400px, 340px"
+              quality={95}
+              sizes="(max-width: 767px) 390px, (max-width: 1023px) 490px, 530px"
               className="object-cover object-top" 
             />
           </div>
