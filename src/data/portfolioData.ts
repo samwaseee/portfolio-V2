@@ -441,6 +441,92 @@ export const projects = [
     futurePlans:
       "Adding an interactive mapping feature to visually display tourist spots.",
   },
+  {
+    slug: "numerical-methods-visualizer",
+    title: "Numerical Methods Visualizer",
+    image: "/images/nmv-landing.webp",
+    video: "/videos/nmv_demo.mp4",
+    cardTech: ["Streamlit", "Plotly", "SymPy", "NumPy"],
+    stack: ["Python", "Streamlit", "Plotly", "NumPy", "SymPy", "Pandas"],
+    shortDesc:
+      "An interactive Streamlit app that visualizes numerical methods step by step, covering root finding, interpolation, differentiation, integration, curve fitting, linear systems and ODEs.",
+    longDesc:
+      "Numerical Methods Visualizer is a Python application built with Streamlit and Plotly that makes classical numerical algorithms easier to explore interactively. SymPy parses functions and supplies symbolic derivatives, while NumPy and Pandas support computation and result tables; separate algorithm modules cover seven topics. An iteration slider replays solver steps alongside method-specific geometry, and results tables highlight convergence. The app also includes root-finding benchmarks and head-to-head comparisons, polynomial analysis, linear-system diagnostics, and light and dark modes.",
+    features: [
+      "Step-by-Step Playback: replay every iteration with a slider and watch the algorithm converge.",
+      "Benchmark & Comparison: run all root-finding methods on one function, or race two methods head to head.",
+      "Root Scanner & Polynomial Analysis: find every root in a range, with bounds and starting guesses suggested for polynomials.",
+      "Seven Numerical Topics: root finding, interpolation, differentiation, integration, curve fitting, linear systems and ODE solvers, each with multiple classical methods and worked steps.",
+    ],
+    pageBreakdowns: [
+      {
+        pageName: "Landing Page",
+        description:
+          "The landing page groups the seven numerical topics into Equation Solvers, Data Analysis, and Calculus cards, with a sample visualization and launch control for each topic.",
+        image: "/images/nmv-landing.webp",
+      },
+      {
+        pageName: "Root Finding Setup",
+        description:
+          "The root-finding setup accepts a function and exposes polynomial bounds, suggested starting values, and sign-change brackets alongside single-root and multi-root solver configuration.",
+        image: "/images/nmv-root-setup.webp",
+      },
+      {
+        pageName: "Iteration Dashboard",
+        description:
+          "The bisection dashboard pairs an iteration slider with a convergence plot and iteration table, then summarizes the found root and step-by-step calculation.",
+        image: "/images/nmv-root-dashboard.webp",
+      },
+      {
+        pageName: "Benchmark & Comparison",
+        description:
+          "A benchmark table compares eight root-finding methods by iteration count, root, error, and convergence status, with controls below for visualizing or racing methods.",
+        image: "/images/nmv-benchmark.webp",
+      },
+      {
+        pageName: "Root Scanner",
+        description:
+          "The Find All Roots page scans a selected range, plots the function and detected roots, and lists interval checks with sign-change status.",
+        image: "/images/nmv-root-scanner.webp",
+      },
+      {
+        pageName: "Interpolation",
+        description:
+          "The interpolation page shows a divided-difference table and the interpolating curve through the supplied data points, including tangent markers and an evaluated point.",
+        image: "/images/nmv-interpolation.webp",
+      },
+      {
+        pageName: "Differentiation",
+        description:
+          "The differentiation page displays the input data table and difference coefficients, reports function and derivative values, and visualizes the curve and tangent.",
+        image: "/images/nmv-differentiation.webp",
+      },
+      {
+        pageName: "Integration",
+        description:
+          "The integration page selects a quadrature rule, shows its formula and substituted calculation, and graphs the area under the input data.",
+        image: "/images/nmv-integration.webp",
+      },
+      {
+        pageName: "Linear Systems",
+        description:
+          "The system solver reports determinant, matrix ranks, consistency, and condition-number stability, with elimination steps and a 3D plane intersection below.",
+        image: "/images/nmv-linear.webp",
+      },
+      {
+        pageName: "ODE Solver",
+        description:
+          "The ODE solver configures an initial-value problem and selected numerical methods, then compares solution trajectories over a slope field.",
+        image: "/images/nmv-ode.webp",
+      },
+    ],
+    liveLink: "https://numerical-methods-visualizer.streamlit.app/",
+    githubClient: "https://github.com/samwaseee/Numerical-Methods-Visualizer",
+    challenges:
+      "Each solver returns its iteration history in a different shape, so the app normalizes those results before plotting them together or comparing methods. Newton-Raphson can fail at zero derivatives or singularities, so the solvers handle those cases rather than letting an invalid step crash the app.",
+    futurePlans:
+      "Adding unit tests for the algorithm modules is planned, along with exploring additional methods such as Steffensen's.",
+  },
 ];
 
 export const achievements = [

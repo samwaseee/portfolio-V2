@@ -9,7 +9,8 @@ import {
   SiReact, SiExpress, SiNodedotjs, SiMongodb, SiTailwindcss, 
   SiMui, SiFirebase, SiJsonwebtokens, SiStripe, SiNextdotjs, 
   SiTypescript, SiPostgresql, SiFramer, SiHtml5, SiCss, 
-  SiJavascript, SiC, SiCplusplus, SiPython, 
+  SiJavascript, SiC, SiCplusplus, SiPython, SiStreamlit, SiPlotly,
+  SiSympy, SiNumpy, SiPandas,
   SiGithub, SiVercel, SiPrisma, SiMongoose, SiGooglegemini,
   SiCloudinary, SiAntdesign, SiSwiper
 } from "react-icons/si";
@@ -36,6 +37,11 @@ const techIcons: { [key: string]: React.ReactNode } = {
   "HTML5": <SiHtml5 className="w-3 h-3" />,
   "CSS3": <SiCss className="w-3 h-3" />,
   "Python": <SiPython className="w-3 h-3" />,
+  "Streamlit": <SiStreamlit className="w-3 h-3" />,
+  "Plotly": <SiPlotly className="w-3 h-3" />,
+  "SymPy": <SiSympy className="w-3 h-3" />,
+  "NumPy": <SiNumpy className="w-3 h-3" />,
+  "Pandas": <SiPandas className="w-3 h-3" />,
   "C": <SiC className="w-3 h-3" />,
   "C++": <SiCplusplus className="w-3 h-3" />,
 
