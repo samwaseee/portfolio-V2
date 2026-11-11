@@ -2,19 +2,29 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
+// Section links start with "/" so they also work from /blog pages (they go home, then scroll).
 const navLinks = [
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Achievements", href: "#achievements" },
-  { name: "Contact", href: "#contact" },
+  { name: "About", href: "/#about" },
+  { name: "Skills", href: "/#skills" },
+  { name: "Projects", href: "/#projects" },
+  { name: "Achievements", href: "/#achievements" },
+  { name: "Blog", href: "/blog" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState(""); // Tracks the current section
+  const pathname = usePathname();
+
+  // The Blog link is active on every /blog page; section links are only active on the home page.
+  const isActiveLink = (name: string, href: string) =>
+    href === "/blog"
+      ? pathname.startsWith("/blog")
+      : pathname === "/" && activeSection === name.toLowerCase();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -105,13 +115,13 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-5 lg:gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
               // Optional: Highlight the active link in the desktop menu
-              className={`text-sm font-semibold transition-colors ${activeSection === link.name.toLowerCase()
+              className={`text-sm font-semibold transition-colors ${isActiveLink(link.name, link.href)
                   ? "text-red-500"
                   : "text-neutral-400 hover:text-red-500"
                 }`}
@@ -152,7 +162,7 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className={`block px-4 py-3 text-base font-semibold rounded-lg transition-all ${activeSection === link.name.toLowerCase()
+                className={`block px-4 py-3 text-base font-semibold rounded-lg transition-all ${isActiveLink(link.name, link.href)
                     ? "text-red-500 bg-red-500/10"
                     : "text-neutral-300 hover:text-red-500 hover:bg-red-500/10"
                   }`}
