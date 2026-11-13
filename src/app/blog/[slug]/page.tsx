@@ -24,8 +24,8 @@ export async function generateMetadata({
   const post = getPostBySlug(slug);
   if (!post) return {};
 
-  // Use the post's own cover if it has one; otherwise the auto-generated card (./og/route.tsx).
-  const image = post.cover ?? `/blog/${post.slug}/og`;
+  // Prefer a preview-only image, then the visible cover, then the generated card.
+  const image = post.ogImage ?? post.cover ?? `/blog/${post.slug}/og`;
 
   return {
     title: `${post.title} | Samiur Rahman Wasee`,

@@ -20,6 +20,8 @@ export type PostMeta = {
   tags: string[];
   /** Optional cover image path, e.g. "/images/blog/my-cover.webp" */
   cover?: string;
+  /** Optional image used only for link previews */
+  ogImage?: string;
   /** Drafts are visible in `npm run dev` and hidden in production builds. */
   draft: boolean;
   readingMinutes: number;
@@ -62,6 +64,13 @@ function parsePost(fileName: string): Post {
     ? data.tags.map((tag) => String(tag).trim()).filter(Boolean)
     : [];
   const words = content.trim().split(/\s+/).filter(Boolean).length;
+  const ogImage = data.ogImage ? String(data.ogImage) : undefined;
+
+  if (ogImage && !ogImage.startsWith("/")) {
+    throw new Error(
+      `[blog] ${fileName}: "ogImage" must be a path under public/ starting with "/"`
+    );
+  }
 
   return {
     slug,
@@ -73,6 +82,7 @@ function parsePost(fileName: string): Post {
     summary: String(data.summary),
     tags,
     cover: data.cover ? String(data.cover) : undefined,
+    ogImage,
     draft: data.draft === true,
     readingMinutes: Math.max(1, Math.round(words / 220)),
     content,

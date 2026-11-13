@@ -2,6 +2,7 @@
 title: "Object.groupBy(): one less reduce() to write"
 date: "2026-11-12"
 summary: "Grouping an array by a key used to mean reduce(), an empty object and an if check. JavaScript now does it in one call."
+ogImage: "/images/blog/object-groupby-og.jpg"
 tags: ["javascript", "web-development"]
 ---
 

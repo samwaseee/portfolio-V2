@@ -63,7 +63,8 @@ date: "2026-11-12"             # required, YYYY-MM-DD
 summary: "One or two sentences shown in the list and in link previews."  # required
 tags: ["federated-learning"]   # optional
 updated: "2026-12-01"          # optional
-cover: "/images/blog/my-cover.webp"  # optional, put the file in public/images/blog/
+cover: "/images/blog/my-cover.webp"  # optional, banner shown at the top; also used for previews if there is no ogImage
+ogImage: "/images/blog/my-og-image.jpg"  # optional, image used only for link previews, 1200x630 JPEG or PNG in public/images/blog/
 draft: true                    # optional, hides the post from production
 ---
 ```
