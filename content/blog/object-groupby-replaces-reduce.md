@@ -3,7 +3,6 @@ title: "Object.groupBy(): one less reduce() to write"
 date: "2026-11-12"
 summary: "Grouping an array by a key used to mean reduce(), an empty object and an if check. JavaScript now does it in one call."
 tags: ["javascript", "web-development"]
-cover: "/images/blog/Object.groupBy() Simplifies Grouping.png"
 ---
 
 Turns out JavaScript already has a built-in solution for something I used to write manually.

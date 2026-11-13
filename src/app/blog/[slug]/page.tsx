@@ -6,12 +6,7 @@ import "katex/dist/katex.min.css";
 import "highlight.js/styles/github-dark.css";
 import MarkdownContent from "@/components/blog/MarkdownContent";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
-import {
-  DEFAULT_OG_IMAGE,
-  SITE_URL,
-  formatDate,
-  tagSlug,
-} from "@/lib/blog-utils";
+import { SITE_URL, formatDate, tagSlug } from "@/lib/blog-utils";
 
 // Unknown slugs are a 404 instead of being rendered on demand.
 export const dynamicParams = false;
@@ -29,7 +24,8 @@ export async function generateMetadata({
   const post = getPostBySlug(slug);
   if (!post) return {};
 
-  const image = post.cover ?? DEFAULT_OG_IMAGE;
+  // Use the post's own cover if it has one; otherwise the auto-generated card (./og/route.tsx).
+  const image = post.cover ?? `/blog/${post.slug}/og`;
 
   return {
     title: `${post.title} | Samiur Rahman Wasee`,
